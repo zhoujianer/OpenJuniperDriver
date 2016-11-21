@@ -1,7 +1,14 @@
-本系统是在onos 1.8.0版本的基础上进行的二次开发。
-本系统主要实现的是对Juniper路由器发送netconf命令的功能
+This is a ONOS driver for Juniper router.
 
-    源码中的三个文件夹与onos根目录底下的文件夹相对应。如果你想跑我们
-写的代码，请按照文件夹指示的路径在onos源码中添加对应的文件。并在onos
-的根目录下输入mvn clean install进行编译。当编译成功后，就可以使用我们
-开发的子系统了。
+The code can be divided into three part:
+
+1 The driver. The most important part which compose and parse the XML, and send the XML
+to router.
+
+2 The cli. Build the command which let the users pass parameters to driver.
+
+3 New interfaces. Build some new interfaces in the core. In driver, we implement the interfaces.
+
+Just put the code in corresponding folder of ONOS, and then execute “mvn clean install” you can use it.
+
+The version of ONOS we use is 1.8.0, and the juniper router is M10i, Junos 15.1. 
